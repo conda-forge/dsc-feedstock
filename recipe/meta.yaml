@@ -31,8 +31,8 @@ requirements:
     - ptable
     - pyarrow >=0.5.0
     - python >=3.6
-    - sos >=0.18.1
-    - sos-pbs >=0.9.17.0
+    - sos >=0.18.4
+    - sos-pbs >=0.17.5
     - sqlalchemy
     - sympy
     - tzlocal

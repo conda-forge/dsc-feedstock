@@ -1,5 +1,5 @@
 {% set name = "dsc" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 46ae7db6dad6bdc5b011b23107a2fe8a24704d99ff8049eec9ebbb770984950c
+  sha256: b34a02c6b1807f1ac61f2b96c13eff78d362be82bb70e7bbe3dd8eed5bc36192
 
 build:
   noarch: python
@@ -31,8 +31,8 @@ requirements:
     - ptable
     - pyarrow >=0.5.0
     - python >=3.6
-    - sos >=0.18.1
-    - sos-pbs >=0.9.17.0
+    - sos >=0.18.4
+    - sos-pbs >=0.17.5
     - sqlalchemy
     - sympy
     - tzlocal

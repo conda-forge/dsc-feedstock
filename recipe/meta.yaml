@@ -27,12 +27,12 @@ requirements:
     - msgpack-python
     - numexpr
     - numpy
-    - pandas >=0.23.4
+    - pandas >=0.24.1
     - ptable
     - pyarrow >=0.5.0
     - python >=3.6
-    - sos >=0.18.4
-    - sos-pbs >=0.17.5
+    - sos >=0.19.7
+    - sos-pbs >=0.19.6
     - sqlalchemy
     - sympy
     - tzlocal

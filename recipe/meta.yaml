@@ -1,5 +1,5 @@
 {% set name = "dsc" %}
-{% set version = "0.3.8" %}
+{% set version = "0.3.9" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: de6ba0c19b176262e65347399ef114b89e4dc58eb1c849a323be1be300995fe0
+  sha256: 644f22447e32173824e1fa518725c7a2b50249ac964a2cf7fbdc154474909795
 
 build:
   noarch: python

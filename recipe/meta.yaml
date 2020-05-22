@@ -1,13 +1,13 @@
 {% set name = "dsc" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d339d3041bfd612c2171d245ef86a551d68507f2d833c0713d71dce08d4aa44c
+  sha256: c431147f1c76e57e08167bdf3c084f03084fb4bb0ff5b9a23589d65cdd53fdbb
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
     - dsc = dsc.__main__:main
     - dsc-query = dsc.__query__:main
     - dsc-io = dsc.dsc_io:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -50,7 +50,7 @@ about:
   home: https://github.com/stephenslab/dsc
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
   summary: Implementation of Dynamic Statistical Comparisons
   doc_url: https://stephenslab.github.io/dsc-wiki/
 

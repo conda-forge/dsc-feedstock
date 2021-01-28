@@ -5,11 +5,11 @@ Home: https://github.com/stephenslab/dsc
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dsc-feedstock/blob/master/LICENSE.txt)
 
 Summary: Implementation of Dynamic Statistical Comparisons
 
-
+Documentation: https://stephenslab.github.io/dsc-wiki/
 
 Current build status
 ====================

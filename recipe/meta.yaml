@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d145e0ec769e5b015666cfb6763f8c314acf3cdfa7a9f94d4bc2613bded1111c
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - dsc = dsc.__main__:main
     - dsc-query = dsc.__query__:main
@@ -21,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - h5py
     - msgpack-python
@@ -30,7 +30,7 @@ requirements:
     - pandas >=0.24.1
     - ptable
     - pyarrow >=0.5.0
-    - python >=3.6
+    - python >={{ python_min }}
     - sos >=0.19.7
     - sos-pbs >=0.19.6
     - sqlalchemy
@@ -38,6 +38,8 @@ requirements:
     - tzlocal
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - dsc
     - dsc.parser
